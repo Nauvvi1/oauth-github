@@ -1,0 +1,1 @@
+npm install express ejs passport passport-github2 express-session dotenv

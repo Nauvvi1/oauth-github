@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Добро пожаловать</h1>
+    <% if (user) { %>
+        <p>Привет, <%= user.username || user.displayName || user.emails[0].value %>!</p>
+        <a href="/profile">Профиль</a>
+        <a href="/logout">Выйти</a>
+    <% } else { %>
+        <a href="/auth/github">Войти с помощью GitHub</a>
+    <% } %>
+</body>
+</html>
